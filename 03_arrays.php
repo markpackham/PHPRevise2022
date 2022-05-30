@@ -15,3 +15,16 @@ echo '<br>';
 
 var_dump($numbers);
 echo '<br>';
+
+
+$hex = [
+    'red' => '#f00',
+    'green' => '#0f0',
+    'blue' => '#00f',
+];
+
+echo $hex['red'];
+echo '<br>';
+
+var_dump($hex);
+echo '<br>';
