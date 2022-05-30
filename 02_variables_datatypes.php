@@ -24,3 +24,29 @@
 */
 
 $name = 'Timmy';
+$age = 50;
+$hasKids = false;
+$cashOnHand = 11.11;
+
+var_dump($cashOnHand);
+echo '<br>';
+
+echo $name . ' is ' . $age . ' years old';
+echo '<br>';
+
+echo "$name is $age years old";
+echo '<br>';
+
+// cleaner version
+echo "${name} is ${age} years old";
+echo '<br>';
+
+// Unlike JavaScript this will implicitly convert to Int
+$x = '1' + '1';
+var_dump($x);
+echo '<br>';
+
+// Constants (handy for database credentials that you'll never change)
+define('HOST', 'localhost');
+define('USER', 'root');
+var_dump(HOST);
