@@ -40,3 +40,17 @@ if (!empty($posts[0])) {
     echo 'There are no posts';
 }
 echo "<br />";
+
+echo !empty($posts[0]) ? $posts[0] : 'There are no posts';
+echo "<br />";
+
+$firstPost = !empty($posts[0]) ? $posts[0] : 'No posts here';
+echo $firstPost;
+echo "<br />";
+
+// Null Coalescing Operator ?? (PHP 7.4)
+// for people to lazy to write, !empty($posts[0]) ? $posts[0] : null
+// https://www.php.net/manual/en/migration70.new-features.php
+$firstPost = $posts[0] ?? null;
+var_dump($firstPost);
+echo "<br />";
