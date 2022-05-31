@@ -61,3 +61,36 @@ $bValue = ['avocado', 'apple', 'banana'];
 $cKeyAndValue = array_combine($aKey, $bValue);
 print_r($cKeyAndValue);
 echo '<br>';
+
+$keys = array_keys($cKeyAndValue);
+print_r($keys);
+echo '<br>';
+
+// values become keys and keys become values
+// Array ( [avocado] => green [apple] => red [banana] => yellow )
+$flippedArray = array_flip($cKeyAndValue);
+print_r($flippedArray);
+echo '<br>';
+
+$numbers = range(1, 10);
+print_r($numbers);
+echo '<br>';
+
+
+// map through array and create a new one just like in JS
+$newNumbers = array_map(function ($number) {
+    return "Number ${number}";
+}, $numbers);
+print_r($numbers);
+echo '<br>';
+
+// return numbers less than 5
+$lessThan5 = array_filter($numbers, fn ($number) => $number < 5);
+print_r($lessThan5);
+echo '<br>';
+
+$numbers = range(1, 3);
+// iteratively reduce the array to a single value using a callback function
+// so here we have 1 + 2 + 3 = 6
+$sum = array_reduce($numbers, fn ($carry, $number) => $carry + $number);
+var_dump($sum);
