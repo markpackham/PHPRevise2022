@@ -1,8 +1,10 @@
 <?php
 
 if (isset($_POST['submit'])) {
-    $name = htmlspecialchars($_POST['name']);
-    $age = htmlspecialchars($_POST['age']);
+    // $age = htmlspecialchars($_POST['age']);
+    // $name = htmlspecialchars($_POST['name']);
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+    $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_SPECIAL_CHARS);
     echo $name . ' - ' . $age;
 }
 
