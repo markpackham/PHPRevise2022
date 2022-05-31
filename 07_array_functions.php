@@ -42,3 +42,22 @@ print_r($chunked_array);
 echo '<br>';
 // array ( 0 => array ( 0 => 'apple', 1 => 'banana', ), 1 => array ( 0 => 'orange', 1 => 'mango', ), 2 => array ( 0 => 'raspberry', 1 => 'kiwi', ), )
 var_export($chunked_array);
+echo '<br>';
+
+// concat arrays
+$arr1 = [1, 2, 3];
+$arr2 = [4, 5, 6];
+$arr3 = array_merge($arr1, $arr2);
+var_dump($arr3);
+echo '<br>';
+// spread just like JS
+$arr4 = [...$arr1, ...$arr2];
+var_dump($arr4);
+echo '<br>';
+
+$aKey = ['green', 'red', 'yellow'];
+$bValue = ['avocado', 'apple', 'banana'];
+// first array used for keys and second for values
+$cKeyAndValue = array_combine($aKey, $bValue);
+print_r($cKeyAndValue);
+echo '<br>';
