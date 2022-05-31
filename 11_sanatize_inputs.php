@@ -1,18 +1,17 @@
 <?php
 
 if (isset($_POST['submit'])) {
-    echo '<h3>' . $_POST['username'] . '</h3>';
-    echo '<br>';
-    echo '<h3>' . $_POST['age'] . '</h3>';
-    echo '<br>';
+    $name = htmlspecialchars($_POST['name']);
+    $age = htmlspecialchars($_POST['age']);
+    echo $name . ' - ' . $age;
 }
 
 ?>
 
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
     <div>
         <label>Name: </label>
-        <input type="text" name="username">
+        <input type="text" name="name">
     </div>
     <div>
         <label>Age: </label>
