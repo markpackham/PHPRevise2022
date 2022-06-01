@@ -1,4 +1,5 @@
-<?php include('inc/header.php') ?>
+<!-- include_once over include https://www.php.net/manual/en/function.include-once.php -->
+<?php include_once('inc/header.php') ?>
 <h2>Feedback</h2>
 
 <div class="card my-3">
@@ -24,4 +25,4 @@
     perferendis!
   </div>
 </div>
-<?php include('inc/footer.php') ?>
+<?php include_once('inc/footer.php') ?>
