@@ -41,16 +41,16 @@ echo substr($string, 5);
 echo '<br>';
 
 // Starts with (PHP 8)
-// if (str_starts_with('abc', '')) {
-//     echo "All strings start with the empty string";
-// }
-// echo '<br>';
+if (str_starts_with('abc', '')) {
+    echo "All strings start with the empty string";
+}
+echo '<br>';
 
 // Ends with (PHP 8)
-// if (str_ends_with($string, 'ld')) {
-//     echo 'YES';
-// }
-// echo '<br>';
+if (str_ends_with($string, 'ld')) {
+    echo 'YES';
+}
+echo '<br>';
 
 // HTML Entities (good pal to have to stop JS script injections)
 // works like htmlspecialchars but htmlspecialchars only bothers with special characters
