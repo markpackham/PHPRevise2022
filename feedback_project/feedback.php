@@ -1,4 +1,5 @@
 <!-- include_once over include https://www.php.net/manual/en/function.include-once.php -->
+<!-- handy for saving resources if the file you're importing doesn't have content that constantly updates -->
 <?php include_once('inc/header.php') ?>
 <h2>Feedback</h2>
 
