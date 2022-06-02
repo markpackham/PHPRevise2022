@@ -2,17 +2,35 @@
 
 <?php
 // set all variables to nothing
-$name = $email = $body = $date = '';
-$nameErr = $emailErr = $bodyErr = $dateErr = '';
+$name = $email = $body = '';
+$nameErr = $emailErr = $bodyErr = '';
 
 // Form submit
 if (isset($_POST['submit'])) {
+
   // Validate name 
   if (empty($_POST['name'])) {
     $nameErr = 'Name is required';
   } else {
-    $name = filter_input($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
   }
+
+  if (empty($_POST['email'])) {
+    $emailErr = 'Email is required';
+  } else {
+    // we can use either filter input or filter var
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    // $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+  }
+
+  if (empty($_POST['body'])) {
+    $bodyErr = 'Feedback is required';
+  } else {
+    $body = filter_var($_POST['body'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+  }
+
+  echo $nameErr;
+  echo $name;
 }
 ?>
 
@@ -23,7 +41,10 @@ if (isset($_POST['submit'])) {
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="mt-4 w-75">
   <div class="mb-3">
     <label for="name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+    <input type="text" class="form-control is-invalid" id="name" name="name" placeholder="Enter your name">
+    <div class="invalid-feedback">
+
+    </div>
   </div>
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
