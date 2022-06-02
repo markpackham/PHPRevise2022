@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2022 at 01:42 PM
+-- Generation Time: Jun 02, 2022 at 04:16 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -40,7 +40,9 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id`, `name`, `email`, `body`, `date`) VALUES
-(1, 'Billy', 'billy@email.com', 'Some random feedback', '2022-06-02 12:42:25');
+(1, 'Billy', 'billy@email.com', 'Some random feedback', '2022-06-02 12:42:25'),
+(2, 'John', 'john@email.com', 'Hello World this is a feedback test.', '2022-06-02 14:08:58'),
+(3, 'bob', 'bob@email.com', 'I like filling in feedback forms but have nothing to actually say.', '2022-06-02 15:15:50');
 
 --
 -- Indexes for dumped tables
@@ -60,7 +62,7 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
