@@ -23,6 +23,22 @@
                     return;
                 }
 
+                // if start of column, open <tr>
+                if ($column === 1) {
+                    echo "<tr>";
+                }
+        ?>
+
+                <td valign="top" bgcolor="lightblue" width="100px" height="100px">
+                    <?= $record_id ?>
+                </td>
+
+        <?php
+                // if column equals max_columns close table row
+                if ($column === $max_columns) {
+                    echo "</tr>";
+                }
+
                 $record_id++;
             }
         }
