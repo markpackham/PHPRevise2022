@@ -37,11 +37,18 @@ echo "opendir() and readir() solution.";
 echo "<br/>";
 echo "<br/>";
 // opendir() and readir()
-if ($handle = opendir($local_dir)) {
-    while (false !== ($file = readdir($handle))) {
-        if ($file != '.' && $file != '..') {
-            $files[] = $file;
+function clean_readdir($dir)
+{
+    $files =  [];
+    if ($handle = opendir($dir)) {
+        while (false !== ($file = readdir($handle))) {
+            if ($file != '.' && $file != '..') {
+                $files[] = $file;
+            }
         }
+        closedir($handle);
     }
-    closedir($handle);
+    return $files;
 }
+
+pre_r(clean_readdir($local_dir));
