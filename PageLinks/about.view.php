@@ -181,7 +181,7 @@
         </header>
         <main>
             <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-                <p>Welcome to the homepage</p>
+                <p>Welcome to the About Page</p>
                 <!-- /End replace -->
             </div>
         </main>
