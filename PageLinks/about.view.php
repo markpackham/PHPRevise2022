@@ -27,10 +27,10 @@
                                     class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                                     aria-current="page">Home</a>
 
-                                <a href="/PHPRevise2022/PageLinks/about"
+                                <a href="/PHPRevise2022/PageLinks/about.php"
                                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
 
-                                <a href="/PHPRevise2022/PageLinks/contact"
+                                <a href="/PHPRevise2022/PageLinks/contact.php"
                                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                             </div>
                         </div>
